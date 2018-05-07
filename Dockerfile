@@ -12,5 +12,6 @@ RUN dos2unix /etc/nginx/nginx.conf
 RUN mkdir /etc/nginx/html/
 RUN echo "<h2>This is from HTTP2 enabled container</h2>" > /etc/nginx/html/index.html
 # Run NGINX
-EXPOSE 443
+#EXPOSE 443
+EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
